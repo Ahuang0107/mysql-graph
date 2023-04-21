@@ -47,8 +47,8 @@ create table basic_staff
     legal_entity_code varchar(5)   not null
 );
 insert into basic_staff
-values ('eb24e23d-c827-4add-8b93-be24b850f7d0', 'Þórvaldr Ratna', '441', 'CNL01')
-     , ('b87e013c-b275-41b7-ab92-8aba942d7866', 'Romy Dosifey', '441', 'CNL01')
-     , ('262345c3-9837-4480-be7c-65e92ae2d0a9', 'Winfrith Concetto', '441', 'CNL01')
-     , ('84030296-2a53-4f75-9fa8-31a199a2ad20', 'Baraz Wulfstan', '441', 'CNL01')
-     , ('76b29035-15ff-4e58-97fd-c39bbef8b4b3', 'Henryk Prem', '441', 'CNL01');
+values ('eb24e23d-c827-4add-8b93-be24b850f7d0', 'Þórvaldr Ratna', '441', 'HKL01')
+     , ('b87e013c-b275-41b7-ab92-8aba942d7866', 'Romy Dosifey', '422', 'CNL01')
+     , ('262345c3-9837-4480-be7c-65e92ae2d0a9', 'Winfrith Concetto', '321', 'CNL03')
+     , ('84030296-2a53-4f75-9fa8-31a199a2ad20', 'Baraz Wulfstan', '212', 'CNL04')
+     , ('76b29035-15ff-4e58-97fd-c39bbef8b4b3', 'Henryk Prem', '112', 'HKL03');
