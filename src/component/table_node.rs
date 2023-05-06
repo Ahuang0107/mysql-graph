@@ -2,7 +2,7 @@ use eframe::egui::{Align2, Color32, FontId, Pos2, Rect, Rounding, Sense, Shape, 
 use eframe::egui::{Response, Ui, Widget};
 use eframe::epaint::{CircleShape, FontFamily, RectShape};
 
-use crate::data_source::TableColumn;
+use crate::model::ColumnStatement;
 
 const WIDTH: f32 = 236.0;
 const BACKGROUND_COLOR: Color32 = Color32::from_rgb(48, 48, 48);
@@ -19,12 +19,12 @@ const JOIN_POINT_SPACE: f32 = 35.0;
 pub struct TableNode {
     pub position: Pos2,
     pub scale: f32,
-    pub columns: Vec<TableColumn>,
+    pub columns: Vec<ColumnStatement>,
     pub name: String,
 }
 
 impl TableNode {
-    pub fn new(name: &str, columns: Vec<TableColumn>) -> Self {
+    pub fn new(name: &str, columns: Vec<ColumnStatement>) -> Self {
         Self {
             position: Pos2::default(),
             scale: 1.0,

@@ -41,6 +41,12 @@ impl NodeContextMenu {
     pub fn update_pos(&mut self, pos: Pos2) {
         self.pos = pos;
     }
+    pub fn update_items(&mut self, items: Vec<&String>) {
+        self.item_list.clear();
+        for x in items {
+            self.item_list.push((x.clone(), None));
+        }
+    }
     pub fn if_clicked(&self, ui: &Ui) -> Option<String> {
         let mut clicked_pos = None;
         ui.ctx().input(|input_state| {
@@ -84,10 +90,7 @@ impl Default for NodeContextMenu {
         Self {
             pos: Pos2::default(),
             rect: Rect::NOTHING,
-            item_list: vec![
-                (String::from("Table Node"), None),
-                (String::from("Math Node"), None),
-            ],
+            item_list: vec![],
         }
     }
 }
