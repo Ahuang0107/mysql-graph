@@ -1,5 +1,6 @@
 pub type DbColumnStatement = (String, String, String, String, Option<String>, String);
 
+#[allow(dead_code)]
 pub type ColumnsStatement = Vec<ColumnStatement>;
 
 #[derive(Debug, Clone)]
