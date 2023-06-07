@@ -116,7 +116,7 @@ impl Widget for &mut TableNode {
             let join_point_init_pos_left = rect.left_top() + Vec2::new(0.0, 60.0) * scale;
             let join_point_init_pos_right = rect.right_top() + Vec2::new(0.0, 60.0) * scale;
             let join_point_space = Vec2::new(0.0, JOIN_POINT_SPACE) * scale;
-            let join_point_radius = 9.0 * scale;
+            let join_point_radius = 8.0 * scale;
             let join_point_stroke = 1.5 * scale;
             for (index, column) in self.columns.iter().enumerate() {
                 let join_point_pos_left =

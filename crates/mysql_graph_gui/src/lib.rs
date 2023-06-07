@@ -4,6 +4,7 @@ use eframe::epaint::CubicBezierShape;
 use crate::component::TableNode;
 
 mod component;
+mod ui_state;
 
 #[derive(Default)]
 pub struct MysqlGraphApp;
@@ -30,19 +31,33 @@ impl eframe::App for MysqlGraphApp {
                 id: 1,
                 central_panel_rect: rest_rect,
                 position: [50.0, 50.0].into(),
-                scale: 0.5,
-                columns: vec!["Column 01".into(), "Column 02".into()],
-                name: "Table Node Demo 01".into(),
+                scale: 1.0,
+                columns: vec![
+                    "id bigint".into(),
+                    "name varchar(255)".into(),
+                    "code varchar(255)".into(),
+                    "pic_id bigint".into(),
+                    "eng_type int".into(),
+                    "deleted tinyint(1)".into(),
+                ],
+                name: "basic_engage".into(),
             };
             let mut table_node_2 = TableNode {
                 id: 2,
                 central_panel_rect: rest_rect,
-                position: [350.0, 150.0].into(),
-                scale: 0.5,
-                columns: vec!["Column 03".into()],
-                name: "Table Node Demo 02".into(),
+                position: [350.0, 50.0].into(),
+                scale: 1.0,
+                columns: vec![
+                    "id bigint".into(),
+                    "gui varchar(64)".into(),
+                    "gpn varchar(64)".into(),
+                    "user_name varchar(64)".into(),
+                    "user_type int".into(),
+                    "deleted tinyint(1)".into(),
+                ],
+                name: "basic_staff".into(),
             };
-            let join_point_1 = table_node_1.get_join_point_right(0);
+            let join_point_1 = table_node_1.get_join_point_right(3);
             let join_point_2 = table_node_2.get_join_point_left(0);
             ui.painter().add(eframe::egui::Shape::CubicBezier(
                 CubicBezierShape::from_points_stroke(
